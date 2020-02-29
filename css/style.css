@@ -38,12 +38,8 @@ input[type="radio"].visually-hidden {
     padding: 0 27px;
     max-width: 1200px;
 
-    background-color: rgba(255, 0, 50, 0.2);
-    outline: 3px solid green;
-}
-
-.container-contacts {
-    padding: 0;
+    /*  background-color: rgba(255, 0, 50, 0.2);
+    outline: 3px solid green;        */
 }
 
 li {
@@ -61,7 +57,39 @@ img {
 
 /*   общие стили для кнопок   */
 
+.button {
+    display: inline-block;
+    border: none;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 25px;
+    padding: 10px 24px;
 
+    color: #fefefe;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    background-color: #e84d37;
+    background-image: linear-gradient(0deg, #e74a35 0%, #f26843 100%);
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    box-shadow: 0px 1px 2px 0 #ac1000;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+        linear-gradient(to top, #e74a35, #f26843);
+}
+
+.button:active {
+    color: rgb(252, 238, 236);
+    box-shadow: inset 0px 2px 2px 0 #942718;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+        linear-gradient(to top, #e74a35, #f26843);
+}
 
 /*   HEADER   */
 
@@ -251,29 +279,299 @@ img {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.promo-title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 41px;
+    text-align: left;
+}
+
+.promo-item {
+    width: 560px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 23px 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .raspberry {
-    width: 560px;
     background-color: #6d202f;
-    border-radius: 15px;
     background-image: url(../img/Raspberry.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .chocolate {
-    width: 560px;
     background-color: #4f3e32;
-    border-radius: 15px;
     background-image: url(../img/Chocolate.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+.promo-text {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+    margin-bottom: 45px;
+}
+
+.button-promo {
+    align-self: flex-end;
 }
 
 /*  CATALOG  */
 
-.product-list {
-    display: flex;
+.catalog {
+    margin-bottom: 10px;
+}
 
+.product-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 267px;
+    margin-right: 20px;
+    margin-bottom: -38px;
+}
+
+.hit-product::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 61px;
+    height: 61px;
+    background-image: url(../svg/hit.svg);
+
+}
+
+.product-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.product-title {
+    margin: 0;
+    padding: 0;
+
+    width: 257px;
+
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+}
+
+.product-link {
+    padding: 0;
+
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.product-photo {
+    order: -1;
+    position: relative;
+    width: 267px;
+    height: 267px;
+    border-radius: 50%;
+    margin-bottom: 13px;
+}
+
+.product-price {
+    margin: 0;
+
+    position: absolute;
+    top: 210px;
+    left: 0;
+
+    text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.price-kilo {
+    font-size: 30px;
+}
+
+.button-quickview {
+
+    visibility: hidden;
+}
+
+/*   FEATURES   */
+
+.features {
+    margin: 0;
+    padding: 0;
+
+    color: #323232;
+    background-color: #e4d8bf;
+    background-image: url(../img/Waffle.jpg);
+    background-repeat: repeat;
+    background-position: 0 0;
+    border-radius: 15px;
+    padding: 27px 31px 25px 20px;
+    margin-bottom: 40px;
+}
+
+.features-title {
+    margin: 0;
+    padding: 0;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+
+}
+
+.features-list {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.features-item {
+    position: relative;
+    width: 540px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding-left: 56px;
+    margin-top: 25px;
+}
+
+.features-item::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+
+    width: 49px;
+    height: 49px;
+}
+
+.ice-cream-item::before {
+    background-image: url(../svg/ice-cream.svg);
+}
+
+.leaf-item::before {
+    background-image: url(../svg/eco.svg);
+}
+
+.cow-item::before {
+    background-image: url(../svg/cow.svg);
+}
+
+.term-item::before {
+    background-image: url(../svg/thermometer.svg);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news {
+    color: #323232;
+    background-color: #ffffff;
+    background-image: url(../img/Sherbet.jpg);
+    width: 560px;
+    background-size: cover;
+    background-position: 0 0;
+    border-radius: 15px;
+    padding: 25px 20px;
+}
+
+.news-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: left;
+}
+
+.news-link {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    color: #323232;
+    text-decoration: underline;
+}
+
+.news-link:hover {
+    color: #e84d37;
+}
+
+.subscription {
+    background-color: #ffffff;
+    background-image: url(../svg/subscribe-bg.svg);
+    width: 560px;
+    background-size: cover;
+    background-position: 0 0;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.sub-wrapper {
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    background-color: #f8f7f4;
+    padding: 35px 21px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: #5a5a5a;
+}
+
+.sub-text {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 38px;
+}
+
+.button-subscription {
+    margin-right: auto;
+}
+
+.container-contacts {
+    padding: 0;
+}
+
+.contacts {
+    width: 1200px;
+    height: 430px;
+    background-image: url(../img/map.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
 }
