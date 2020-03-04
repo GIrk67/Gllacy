@@ -162,14 +162,12 @@
           <div class="subscription">
             <h2 class="visually-hidden">Подписка на новости</h2>
             <div class="sub-wrapper">
-              <p class="sub-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
-                что
-                у
-                нас происходит.
-                Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-              <form action="https://echo.htmlacademy.ru">
-                <label for="subscription-email"></label>
-                <input id="subscription-email" type="email">
+              <p class="sub-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,что
+                у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+              <form class="sub-form" action="https://echo.htmlacademy.ru" method="post">
+                <label class="visually-hidden" for="subscription-email">Ваша электронная почта для подписки</label>
+                <input class="sub-mail" id="subscription-email" type="email" name="email"
+                  placeholder="Электронная почта">
                 <button class="button button-subscription" type="submit">Отправить</button>
               </form>
             </div>
@@ -236,7 +234,7 @@
 
   <section class="modal modal-login">
     <h2 class="visually-hidden">Личный кабинет</h2>
-    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+    <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label class="visually-hidden" for="user-login">Логин</label>
         <input class="login-email-user" id="user-login" type="text" name="login" placeholder="Электронная почта"></p>
@@ -244,18 +242,19 @@
         <label class="visually-hidden" for="user-password">Пароль</label>
         <input class="password-icon-user" id="user-password" type="password" name="password" placeholder="Пароль">
       </p>
-      <p class="login-password-info">
+      <div class="login-entrance">
         <button class="button" type="submit">Войти</button>
-        <a class="restore" href="#">Забыли пароль?</a>
-        <a class="registration" href="#">Новая регистрация</a>
-      </p>
+        <p class="login-password-info">
+          <a class="restore" href="#">Забыли пароль?</a>
+          <a class="registration" href="#">Новая регистрация</a></p>
+      </div>
     </form>
   </section>
 
   <section class="modal modal-feedback">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <p class="modal-description">Мы обязательно вам ответим!</p>
-    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+    <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label class="visually-hidden" for="user-name">Ваше имя</label>
         <input class="name-user" id="user-name" type="text" name="name" placeholder="Как вас зовут?"></p>
@@ -267,11 +266,11 @@
         <label class="visually-hidden" for="user-message">Поле для сообщения</label>
         <textarea class="name-message" id="user-message" type="text" name="message"
           placeholder="Напишите что-нибудь"></textarea></p>
-      <button class="button" type="submit">Отправить</button>
+      <button class="button button-feedback-form" type="submit">Отправить</button>
     </form>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
-
+  <div class="modal feedback-overlay"></div>
 </body>
 
 </html>
