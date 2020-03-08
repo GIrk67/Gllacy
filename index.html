@@ -26,13 +26,46 @@
           <img src="svg/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
         </a>
         <ul class="site-navigation">
-          <li><a class="site-navigation-link" href="catalog.html">Каталог</a></li>
+          <li class="site-navigation-submenu"><a class="site-navigation-link" href="catalog.html">Каталог</a>
+            <ul class="submenu">
+              <li class="submenu-item"><a class="submenu-link" href="">Новинки</a></li>
+              <li class="submenu-item"><a class="submenu-link" href="catalog.html">Сливочное</a></li>
+              <li class="submenu-item"><a class="submenu-link" href="">Щербеты</a></li>
+              <li class="submenu-item"><a class="submenu-link" href="">Фруктовый лед</a></li>
+              <li class="submenu-item"><a class="submenu-link" href="">Мелорин</a></li>
+            </ul>
+          </li>
           <li><a class="site-navigation-link" href="#">Доставка и оплата</a></li>
           <li><a class="site-navigation-link" href="#">О компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li><a class="user-navigation-link search-link" href="">Поиск</a></li>
-          <li><a class="user-navigation-link entrance-link" href="">Вход</a></li>
+          <li class="search-item"><a class="user-navigation-link search-link" href="#">Поиск</a>
+            <h2 class="visually-hidden">Форма поиска</h2>
+            <form class="modal modal-search" action="https://echo.htmlacademy.ru" method="GET">
+              <label for="form-search"></label>
+              <input id="form-search" type="text" placeholder="Что ищем?">
+            </form>
+          </li>
+          <li class="entrance-item"><a class="user-navigation-link entrance-link" href="">Вход</a>
+            <h2 class="visually-hidden">Личный кабинет</h2>
+            <form class="modal modal-login" action="https://echo.htmlacademy.ru" method="post">
+              <p>
+                <label class="visually-hidden" for="user-login">Логин</label>
+                <input class="login-email-user" id="user-login" type="text" name="login"
+                  placeholder="Электронная почта"></p>
+              <p>
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input class="password-icon-user" id="user-password" type="password" name="password"
+                  placeholder="Пароль">
+              </p>
+              <div class="login-entrance">
+                <button class="button" type="submit">Войти</button>
+                <p class="login-password-info">
+                  <a class="restore" href="#">Забыли пароль?</a>
+                  <a class="registration" href="#">Новая регистрация</a></p>
+              </div>
+            </form>
+          </li>
           <li><a class="user-navigation-link basket-link" href="">Пусто</a></li>
         </ul>
       </nav>
@@ -223,33 +256,6 @@
       </div>
     </footer>
   </div>
-
-  <section class="modal modal-search">
-    <h2 class="visually-hidden">Форма поиска</h2>
-    <form action="https://echo.htmlacademy.ru" method="GET">
-      <label for="form-search"></label>
-      <input id="form-search" type="text" placeholder="Что ищем?">
-    </form>
-  </section>
-
-  <section class="modal modal-login">
-    <h2 class="visually-hidden">Личный кабинет</h2>
-    <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label class="visually-hidden" for="user-login">Логин</label>
-        <input class="login-email-user" id="user-login" type="text" name="login" placeholder="Электронная почта"></p>
-      <p>
-        <label class="visually-hidden" for="user-password">Пароль</label>
-        <input class="password-icon-user" id="user-password" type="password" name="password" placeholder="Пароль">
-      </p>
-      <div class="login-entrance">
-        <button class="button" type="submit">Войти</button>
-        <p class="login-password-info">
-          <a class="restore" href="#">Забыли пароль?</a>
-          <a class="registration" href="#">Новая регистрация</a></p>
-      </div>
-    </form>
-  </section>
 
   <section class="modal modal-feedback">
     <h2 class="visually-hidden">Форма обратной связи</h2>
