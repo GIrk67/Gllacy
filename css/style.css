@@ -1316,6 +1316,7 @@ input:focus {
     width: 61px;
     height: 61px;
     background-image: url(../svg/hit.svg);
+    z-index: 5;
 }
 
 .product-item:nth-child(4n) {
@@ -1688,7 +1689,7 @@ input:focus {
 }
 
 .feedback-overlay {
-    visibility: hidden;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -1699,7 +1700,7 @@ input:focus {
 }
 
 .modal-feedback {
-    visibility: hidden;
+    display: none;
     position: fixed;
     top: 337px;
     margin-left: -239px;
@@ -1764,4 +1765,8 @@ input:focus {
 .button-feedback-form {
     display: block;
     margin-left: auto;
+}
+
+.modal-show {
+    display: block;
 }
