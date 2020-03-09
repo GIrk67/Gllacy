@@ -675,12 +675,12 @@ input:focus {
 
 .raspberry {
     background-color: #6d202f;
-    background-image: url(../img/Raspberry.jpg);
+    background-image: url(../img/raspberry.jpg);
 }
 
 .chocolate {
     background-color: #4f3e32;
-    background-image: url(../img/Chocolate.jpg);
+    background-image: url(../img/chocolate.jpg);
 }
 
 .promo-text {
@@ -704,7 +704,7 @@ input:focus {
 
     color: #323232;
     background-color: #e4d8bf;
-    background-image: url(../img/Waffle.jpg);
+    background-image: url(../img/waffle.jpg);
     background-repeat: repeat;
     background-position: 0 0;
     border-radius: 15px;
@@ -777,7 +777,7 @@ input:focus {
 .news {
     color: #323232;
     background-color: #ffffff;
-    background-image: url(../img/Sherbet.jpg);
+    background-image: url(../img/sherbet.jpg);
     width: 560px;
     background-size: cover;
     background-position: 0 0;
