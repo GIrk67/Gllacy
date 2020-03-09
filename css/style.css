@@ -33,7 +33,7 @@ input[type="radio"].visually-hidden {
     padding: 0;
     width: 1px;
     height: 1px;
-    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
 
     border: 0;
     overflow: hidden;
@@ -68,7 +68,7 @@ input[type="radio"].visually-hidden {
 
 .slider {
     position: relative;
-    padding-top: 357px;
+    padding-top: 279px;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -254,12 +254,13 @@ input:focus {
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 10px;
-    margin-bottom: 3px;
+
+    margin-bottom: 5px;
 }
 
 .site-navigation {
     margin: 0;
+    margin-top: 15px;
     padding: 0;
     width: 600px;
     display: flex;
@@ -274,6 +275,7 @@ input:focus {
     width: 154px;
     height: 64px;
     margin-right: 10px;
+    padding-top: 10px;
 }
 
 .site-navigation-link {
@@ -398,13 +400,13 @@ input:focus {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-
+    padding-top: 10px;
     width: 360px;
     margin-left: auto;
 }
 
 .user-navigation li {
-    margin-right: 9px;
+    margin-right: 11px;
 }
 
 .user-navigation-link {
@@ -460,10 +462,14 @@ input:focus {
     visibility: visible;
 }
 
-.entrance-link,
+.entrance-link {
+    position: relative;
+    padding: 8px 17px 8px 42px;
+}
+
 .basket-link {
     position: relative;
-    padding: 8px 14px 8px 42px;
+    padding: 8px 34px 8px 42px;
 }
 
 .entrance-link::before {
@@ -562,6 +568,7 @@ input:focus {
 
 .basket-item-full .basket-link {
     color: #323232;
+    padding-right: 17px;
 }
 
 .basket-item-full .basket-link::before {
@@ -648,7 +655,7 @@ input:focus {
 .promo-title {
     margin: 0;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 
     font-size: 35px;
     font-weight: bold;
@@ -661,7 +668,7 @@ input:focus {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 15px;
-    padding: 23px 20px;
+    padding: 19px 20px;
     display: flex;
     flex-direction: column;
 }
@@ -701,7 +708,7 @@ input:focus {
     background-repeat: repeat;
     background-position: 0 0;
     border-radius: 15px;
-    padding: 27px 31px 25px 20px;
+    padding: 27px 20px 25px;
     margin-bottom: 40px;
 }
 
@@ -732,7 +739,7 @@ input:focus {
     font-weight: 400;
     line-height: 22px;
     padding-left: 56px;
-    margin-top: 25px;
+    margin-top: 22px;
 }
 
 .features-item::before {
@@ -775,7 +782,11 @@ input:focus {
     background-size: cover;
     background-position: 0 0;
     border-radius: 15px;
-    padding: 25px 20px;
+    padding: 22px 20px;
+}
+
+.news p {
+    margin: 0;
 }
 
 .news-title {
@@ -784,9 +795,11 @@ input:focus {
     font-weight: 500;
     line-height: 22px;
     text-align: left;
+    margin-bottom: 3px;
 }
 
 .news-link {
+
     display: block;
     width: 300px;
     font-size: 24px;
@@ -816,7 +829,7 @@ input:focus {
 
     border-radius: 10px;
     background-color: #f8f7f4;
-    padding: 35px 21px;
+    padding: 30px 21px;
 
     font-size: 16px;
     font-weight: 400;
@@ -828,7 +841,7 @@ input:focus {
 .sub-text {
     margin: 0;
     padding: 0;
-    margin-bottom: 38px;
+    margin-bottom: 35px;
 }
 
 .sub-form {
@@ -874,7 +887,7 @@ input:focus {
 }
 
 .contact-adress {
-    margin-bottom: 21px;
+    margin-bottom: 17px;
 }
 
 .contact-legend p {
@@ -969,7 +982,7 @@ input:focus {
 
 .filters {
     max-width: 870px;
-    margin-bottom: 34px;
+    margin-bottom: 20px;
 }
 
 .filter-form {
@@ -1151,7 +1164,7 @@ input:focus {
 
 .filter-form-item .supplement {
     width: 705px;
-    padding: 8px 15px 9px;
+    padding: 8px 20px 9px 12px;
 }
 
 .filter-options {
@@ -1244,7 +1257,7 @@ input:focus {
     border: solid 2px #ffffff;
     background-color: rgba(255, 255, 255, 0.2);
 
-    padding: 7px 30px 7px;
+    padding: 7px 27px 7px;
     border-radius: 20px;
 }
 
@@ -1262,10 +1275,6 @@ input:focus {
 }
 
 /*  CATALOG  */
-
-.catalog {
-    margin-bottom: 10px;
-}
 
 .container-catalog {
     padding: 0 14px;
@@ -1289,7 +1298,7 @@ input:focus {
     padding: 6px 14px 22px 13px;
     border-radius: 7px;
 
-    margin-bottom: -38px;
+    margin-bottom: -48px;
 }
 
 .product-item:hover {
@@ -1380,14 +1389,15 @@ input:focus {
     padding: 0;
     display: flex;
     justify-content: flex-end;
-    padding-top: 80px;
+    padding-top: 45px;
+    padding-right: 10px;
     padding-bottom: 30px;
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .pagination-item {
-    margin-right: 3px;
+    margin-right: 4px;
 }
 
 .pagination-item:last-child {
@@ -1461,7 +1471,7 @@ input:focus {
 /*   FOOTER   */
 
 .main-footer .container {
-    padding-top: 35px;
+    padding-top: 21px;
     padding-bottom: 25px;
     display: flex;
     justify-content: space-between;
@@ -1477,6 +1487,7 @@ input:focus {
 }
 
 .social-item {
+    margin-top: 5px;
     margin-right: 11px;
 }
 
@@ -1521,16 +1532,16 @@ input:focus {
 .footer-menu {
     margin: 0;
     padding: 0;
-
-    width: 340px;
+    margin-top: 10px;
+    width: 410px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 
 .footer-menu-item {
-    margin-bottom: 5px;
-    margin-right: 20px;
+    margin-bottom: 2px;
+    margin-right: 8px;
     min-width: 135px;
 }
 
