@@ -860,6 +860,7 @@ input:focus {
 }
 
 .container-contacts {
+    position: relative;
     padding: 0;
 }
 
@@ -875,6 +876,13 @@ input:focus {
     padding: 63px 27px;
 }
 
+.gmap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
 .contact-legend {
     margin: 0;
 
@@ -884,6 +892,7 @@ input:focus {
     height: 305px;
     border-radius: 15px;
     padding: 30px 25px;
+    z-index: 3;
 }
 
 .contact-adress {
@@ -1622,6 +1631,47 @@ input:focus {
 
 /*   POPUP   */
 
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+
+    70% {
+        transform: translateY(30px);
+    }
+
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(-10px);
+    }
+}
+
 .modal {
     position: absolute;
     color: #323232;
@@ -1769,4 +1819,13 @@ input:focus {
 
 .modal-show {
     display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-show-overlay {
+    display: block;
+}
+
+.modal-error {
+    animation: shake 0.6s;
 }
